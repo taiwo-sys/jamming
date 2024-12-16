@@ -30,6 +30,11 @@ function App() {
     }
   }
 
+  const removeTrack = (track) => {
+    const existingTrack = playlistTracks.filter(t => t.id!==track.id);
+    setPlaylistTracks(existingTrack);
+  }
+
   return (
     <div>
       <h1>
@@ -42,7 +47,7 @@ function App() {
           {/* <!-- Add a SearcResults Component --> */}
           <SearchResults userSearchResults={searchResults} onAdd={addTrack} />
           {/* <!-- Add a Playlist Component --> */}
-          <Playlist playlistName={playlistName} playlistTracks={playlistTracks} />
+          <Playlist playlistName={playlistName} playlistTracks={playlistTracks} onRemove={removeTrack} />
         </div>
       </div>
     </div>

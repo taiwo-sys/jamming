@@ -5,11 +5,17 @@ import Track from '../Track/Track';
 function Tracklist(props){
 
     return (
-        <div className={styles.Tracklist}>
-            {props.userSearchResults.map((track) => (
-                <Track track={track} key={track.id} isRemoval={props.isRemoval} onAdd={props.onAdd} />
-            ))}
-        </div>
+      <div className={styles.Tracklist}>
+        {props.userSearchResults.map((track) => (
+          <Track
+            track={track}
+            key={track.id}
+            isRemoval={props.isRemoval}
+            onAdd={props.onAdd}
+            onRemove={props.onRemove}
+          />
+        ))}
+      </div>
     );
 }
 
