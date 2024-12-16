@@ -7,10 +7,12 @@ function Tracklist(props){
     return (
         <div className={styles.Tracklist}>
             {props.userSearchResults.map((track) => (
-                <Track track={track} key={track.id} />
+                <Track track={track} key={track.id} isRemoval={props.isRemoval} onAdd={props.onAdd} />
             ))}
         </div>
     );
 }
 
 export default Tracklist;
+
+//playlistTrack instead of userSeachResults
