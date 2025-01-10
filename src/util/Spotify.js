@@ -1,6 +1,6 @@
 let accessToken="";
 const clientID = "534bf29cfca945ae96be0a8a2ba553bb";
-const redirectUrl = "https://jampack.netlify.app/";
+const redirectUrl = "https://jampack.netlify.app";
 const Spotify = {
     getAccessToken() {
       // First check for the access token
